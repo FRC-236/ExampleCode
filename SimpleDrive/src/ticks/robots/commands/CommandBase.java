@@ -3,6 +3,7 @@ package ticks.robots.commands;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import ticks.robots.OI;
+import ticks.robots.subsystems.Drive;
 import ticks.robots.subsystems.ExampleSubsystem;
 
 /**
@@ -14,6 +15,7 @@ import ticks.robots.subsystems.ExampleSubsystem;
 public abstract class CommandBase extends Command {
 
     public static OI oi;
+    public static Drive drive;
     // Create a single static instance of all of your subsystems
     public static ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
 

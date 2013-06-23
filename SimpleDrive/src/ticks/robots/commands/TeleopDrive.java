@@ -11,7 +11,7 @@ package ticks.robots.commands;
 public class TeleopDrive extends CommandBase {
     
     public TeleopDrive() {
-        requires(drive);
+        requires(CommandBase.drive);
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
     }
