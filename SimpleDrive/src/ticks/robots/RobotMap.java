@@ -13,6 +13,11 @@ public class RobotMap {
     }
     public static class PWM {
         public static final int leftDrive = 1, rightDrive = 2;
+        public static final int elevatorMotor = 3;
+    }
+    
+    public static class DIO {
+        public static final int elev_enc_A = 1, elev_enc_B = 2;
     }
    
 }
