@@ -31,16 +31,13 @@ public class Elevator extends Subsystem implements PIDSource, PIDOutput{
         elevatorEncoder.setDistancePerPulse(1/256); //256 count encoder
         elevatorMotor = new Victor(RobotMap.PWM.elevatorMotor);
         pidController = new PIDController(0, 0, 0, this, this);
+        pidController.enable();
         SmartDashboard.putData("Elevator PID", pidController);
     }
-    
-    public void enableElevatorControl(){
-        pidController.enable();
+    public void setElevatorSetpoint(double setpoint){
+        pidController.setSetpoint(setpoint);
     }
     
-    public void disableElevatorControl(){
-        pidController.disable();
-    }
     public void closedLoopControl(){
         elevatorMotor.set(pidController.get());
     }
